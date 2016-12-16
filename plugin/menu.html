@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+	<style>
+
+
+		body, input{
+			background-color: #1f1f1f;
+			color: #eee;
+			font-family: Verdana;
+			-webkit-user-select: none;
+			user-select: none;
+		}
+		.arrow{
+			font-weight: bold;
+			cursor: pointer;
+		}
+		.arrow:hover{
+			color: #cc7b19;
+		}
+		.right{
+			text-align: right;
+		}
+		.center{
+			text-align: center;
+		}
+		input{
+			outline: none;
+			width: 100%;
+			text-align: center;
+		}
+
+		#number{
+			border: 0;
+			text-align: center;
+			width: 30px;
+			margin-left: 13px;
+		}
+
+		input[type=range]{
+			-webkit-appearance: none;
+			appearance: none;
+			width: 200px;
+		}
+
+		input[type=range]::-webkit-slider-runnable-track {
+			width: 300px;
+			height: 5px;
+			background: #eee;
+			border: none;
+			border-radius: 3px;
+		}
+
+		input[type=range]::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			border: none;
+			height: 16px;
+			width: 16px;
+			border-radius: 50%;
+			background: #cc7b19;
+			margin-top: -4px;
+		}
+
+		input[type=range]:focus {
+			outline: none;
+		}
+
+		input[type=range]:focus::-webkit-slider-runnable-track {
+			background: #ccc;
+		}
+
+	</style>
+<body>
+
+
+	<table><tbody><tr><td colspan="3">
+		<input type="range" min="-1" max="3" step=".1" value="1" id="range" />
+	</td></tr><tr><td class="arrow" id="leftArrow">
+		&laquo;
+	</td><td class="center">
+		<input type="number" min="-1" max="3" step=".1" value="1" id="number" />
+	</td><td class="arrow right" id="rightArrow">
+		&raquo;
+	<td></tr></tbody></table>
+
+	<table><tbody><tr><td colspan="3">
+		<input type="range" min="-1" max="3" step=".1" value="1" id="gRange" />
+	</td></tr><tr><td class="arrow" id="leftArrow">
+		&laquo;
+	</td><td class="center">
+		<input type="number" min="-1" max="3" step=".1" value="1" id="gNumber" />
+	</td><td class="arrow right" id="rightArrow">
+		&raquo;
+	<td></tr></tbody></table>
+
+	<script type="text/javascript" src="menu.js"></script>

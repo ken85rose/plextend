@@ -1,0 +1,27 @@
+{
+	"manifest_version": 2,
+
+	"name": "Plextend: Playback speed control for Plex",
+	"short_name": "Plextend",
+	"description": "Control playback speed in Plex.",
+	"version": "1.0",
+	"icons": {
+		"16": "16.png",
+		"48": "48.png",
+		"128": "128.png"
+	},
+	"browser_action": {
+		"default_icon": "128.png",
+		"default_popup": "menu.html"
+	},
+	"content_scripts" : [{
+		"matches": [
+			"https://app.plex.tv/*",
+			"http://app.plex.tv/*"
+		],
+		"js": ["script.js"],
+		"run_at": "document_end"
+
+	}],
+	"permissions": ["storage", "tabs", "http://*/*"]
+}
